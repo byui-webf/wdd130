@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang=""eng">
+<head>
+    <meta charset=""UTF-8">
+    <meta http-equiv="X-UACompatible" content="IE=edge">
+    <script>
+        function txt(){
+            let name = document.getElementById('nameInputBox').value;
+            let sometxt="Hello "+ name;
+            document.getElementById('txt1').innerHTML = sometxt;
+        }
+    </script>
+    <title>My title</title>
+</head>
+<body>
+    <h1>Principal header</h1>
+    <h3>Another size of header</h3>
+    <p>You can use <b>input</b>, as a text field, please write your name
+        <input type="text" id="nameInputBox">
+    </p>
+    <h3>Now let's see a <b>button</b></h3>
+        <button type="button" onclick="txt()">Display Button</button>
+        <div
+            id="txt1">
+        </div>  
+</body>
+</html>
