@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Mileage</title>
+
+<script>
+/* Input: initial mileage, final mileage and gallons used
+ * Processing:
+ *   1. Calculate the diference between the final and initial mileages.
+ * Output: the mileage per gallon
+ */
+function mileage() {
+    // Get the initial mileage, final mileage and gallons used from the user.
+    let initialMileage = parseFloat(document.getElementById('initialMileageinputBox').value);
+    let finalMileage = parseFloat(document.getElementById('finalMileageinputBox').value);
+    let gallonsUsed = parseFloat(document.getElementById('gallonsUsedinputBox').value);
+
+    // Compute the mileage per gallon.
+    let distance = finalMileage - initialMileage;
+    let mileage = distance / gallonsUsed;
+
+    // Display the mileage per gallon to the user.
+    document.getElementById('milesPerGallon').innerHTML = mileage;
+}
+</script>
+</head>
+
+<body>
+Please enter the Initial Mileage, Final Mileage and the Gallons Used:<br>
+Initial Mileage <input type="text" id="initialMileageinputBox"><br>  
+Final Mileage <input type="text" id="finalMileageinputBox"><br>  
+Gallons Used <input type="text" id="gallonsUsedinputBox"><br>  
+<button type="button" onclick="mileage()">Mileage per Gallon</button>  
+<div id="milesPerGallon"></div>  
+</body>
+</html>
