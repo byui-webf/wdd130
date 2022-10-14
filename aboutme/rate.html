@@ -16,14 +16,18 @@ function computeRateOfChange() {
     // Get the previous price and the current price.
     let prev_Price = parseFloat(document.getElementById('prevPrice').value);
     let curr_Price = parseFloat(document.getElementById('currPrice').value);
-    //let gallonsUsed = parseFloat(document.getElementById('gallonsUsedinputBox').value);
 
     // Compute rate of change.
     let diference = curr_Price - prev_Price;
     let rate_ = diference / prev_Price;
 
+    // Round the rate to four digits after the decimal.
+    let digits = 4;
+    let multiplier = Math.pow(10, digits);
+    rate_ = Math.round(rate_ * multiplier) / multiplier;
+
     // Display the rate of change.
-    document.getElementById('rate').innerHTML = mileage;
+    document.getElementById('rate').innerHTML = rate_;
 }
 </script>
 </head>
@@ -33,6 +37,6 @@ function computeRateOfChange() {
     Previous Price <input type="text" id="prevPrice"><br>
     Current Price <input type="text" id="currPrice"><br>
     <button type="button" onclick="computeRateOfChange()">Rate of Change</button><br>
-    Rate of Change <div id="rate"></div>
+    Rate <div id="rate"></div>
 </body>
 </html>
