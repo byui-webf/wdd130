@@ -14,19 +14,19 @@ function quartsToLiters() {
     let text = document.getElementById('quartsInputBox').value;
 
     // Convert what the user typed from text into a number.
-    let c = parseFloat(text);
+    let quarts = parseFloat(text);
 
     // Convert the quarts to liters.
-    let f = c / 1.0567;
+    let liters = quarts * 0.946353;
 
     // Display number of liters to the user.
-    document.getElementById('liters').innerHTML = f;
+    document.getElementById('liters').innerHTML = liters;
 }
 </script>
 </head>
 
 <body>                               
-Enter a number of quarts: <input type="text" id="quartsInputBox">
+Enter a number of quarts to convert to liters: <input type="text" id="quartsInputBox">
 <button type="button" onclick="quartsToLiters()">Convert</button>
 <div id="liters"></div>                     
 </body>            

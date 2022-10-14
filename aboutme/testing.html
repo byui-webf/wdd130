@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <title>TI'll put something here maybe...</title>
 <script>
-
+let a = 1, b = 3, c = -2;
+let result = a + b * 7 % 4 - c;
 function HelloWorld() {
     // Get the user's name from the text field that has the id
     // of "nameInputBox" and store it in a variable named name.
@@ -15,10 +16,12 @@ function HelloWorld() {
 
     // Display the scripture in the div that has the id "outputDiv".
     document.getElementById('outputDiv').innerHTML = greeting;
+
 }
 </script>
 </head>
 <body>
+    
     Please enter your name: <input type="text" id="nameInputBox">    
     <button type="button" onclick="HelloWorld()">Verse</button>
     <div id="outputDiv"></div>
