@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Math Skills</title>
+
+<script>
+/* Input: fisrt operand, operator, second operand and the result
+ * Processing:
+ *  Calculate the artithmetic operation.
+ * Output: according to the result display correct or incorrect
+ */
+function arith() {
+    // Get the two operands, the operator and the result of the arithmetic operation from the user.
+    let number1 = parseFloat(document.getElementById('operand1').value);
+    let number2 = parseFloat(document.getElementById('operand2').value);
+    let operator = document.getElementById('operation').value;
+    let result = parseFloat(document.getElementById('answer').value);
+    let message = "test";
+    let solution;
+
+    // Compute the operation.
+    if (operator == "+" ) {
+        solution = number1 + number2;
+        if (result == solution)
+            message = "Correct! Good job!";
+        else
+            message = "Incorrect! Try again!";
+        }
+    else if (operator == "-") {
+        solution = number1-number2;
+        if (result == solution)
+            message = "Correct! Good job!";
+        else
+            message = "Incorrect! Try again!";
+        }
+    else if (operator == "*") {
+        solution = number1*number2;
+        if (result == solution)
+            message = "Correct! Good job!";
+        else
+            message = "Incorrect! Try again!";
+        }
+    else if (operator == "/") {
+        solution = number1/number2;
+        if (result == solution)
+            message = "Correct! Good job!";
+        else
+            message = "Incorrect! Try again!";
+        }
+
+    // Display the message of correct or incorrect.
+    document.getElementById('msg').innerHTML = message;
+}
+</script>
+</head>
+
+<body>
+<h2>Test Your Math Skills!</h2>
+Please enter a simple arithmetic operation (+, -, *, /):<br>
+<input type="text" id="operand1" size="5">
+<input type="text" id="operation" size="2">  
+<input type="text" id="operand2" size="5">
+=  
+<input type="text" id="answer" size="8"><br>  
+<button type="button" onclick="arith()">Check</button>  
+<div id="msg"></div>  
+</body>
+</html>

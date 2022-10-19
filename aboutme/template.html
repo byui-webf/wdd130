@@ -3,25 +3,32 @@
 <head>
     <meta charset=""UTF-8">
     <meta http-equiv="X-UACompatible" content="IE=edge">
+<title>My title</title>    
     <script>
-        function txt(){
-            let name = document.getElementById('nameInputBox').value;
-            let sometxt="Hello "+ name;
-            document.getElementById('txt1').innerHTML = sometxt;
+        function output(){
+//            let name = document.getElementById('nameInputBox').value;
+//           let sometxt="Hello "+ name;
+//            document.getElementById('txt1').innerHTML = sometxt;
+//        }
+    let x = 1, y = 7;
+    let message = "Welcome";   
+    if (x < 2) {
+        if (y > 10) {
+            message = "Hello";
         }
+    else {
+        message = "Goodbye";
+    }
+}
+    document.getElementById('output_').innerHTML = message;
+}
     </script>
-    <title>My title</title>
+    
 </head>
 <body>
-    <h1>You can place here a principal header</h1>
-    <h3>Another size of header</h3>
-    <p>You can use <b>input</b>, as a text field, please write your name
-        <input type="text" id="nameInputBox">
-    </p>
-    <h3>Now let's see a <b>button</b></h3>
-        <button type="button" onclick="txt()">Display Button</button>
-        <div
-            id="txt1">
-        </div>  
+    <button type="button" onclick="output()">Age</button>  
+    <div id="output_"></div>   
+    
+    
 </body>
 </html>
