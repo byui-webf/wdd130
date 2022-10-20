@@ -1,29 +1,49 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>TI'll put something here maybe...</title>
-<script>
-let a = 1, b = 3, c = -2;
-let result = a + b * 7 % 4 - c;
-function HelloWorld() {
-    // Get the user's name from the text field that has the id
-    // of "nameInputBox" and store it in a variable named name.
-    let name = document.getElementById('nameInputBox').value;
-
-    // Use string concatenation to create a Hello World! Message
-    let greeting = "Hello, " + name + ", welcome to this blank world";
-
-    // Display the scripture in the div that has the id "outputDiv".
-    document.getElementById('outputDiv').innerHTML = greeting;
-
-}
-</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <script>
+        /*  Input: First number, the operator, second number, and then solution
+            Processing: perform the math problem, then check if the answer is correct
+            Output: Feedback to the user about the answer    */
+       
+            function mathQuiz(){
+                let firstnum = parseFloat(document.getElementById("firstInput").value);
+                let operate = document.getElementById("operate").value;
+                let secondnum = parseFloat(document.getElementById("secondInput").value);
+                let res = parseFloat(document.getElementById("result").value);
+                // perform the operation
+                let answer = firstnum+operate+secondnum
+                switch (operate){
+                    case "+":
+                        answer = firstnum + secondnum;
+                        break;
+                    case "-":
+                    answer = firstnum - secondnum;
+                        break;
+                    case "*":
+                    answer = firstnum * secondnum;
+                        break;
+                    case "/":
+                    answer = firstnum / secondnum;
+                }
+                if (answer == res){
+                    document.getElementById("outputDiv").innerHTML = "Correct! Good job!";
+                }
+                else {
+                    document.getElementById("outputDiv").innerHTML = "Incorrect! Try again!";
+                }
+               
+            }
+    </script>
 </head>
 <body>
-    
-    Please enter your name: <input type="text" id="nameInputBox">    
-    <button type="button" onclick="HelloWorld()">Verse</button>
+    <h1>Test Your Maths Skills!</h1>
+    <input type="text" id="firstInput" size="3"><input type="text" id="operate" size="1"><input type="text" id="secondInput" size="3"> = <input type="text" id="result" size="3"><br>
+    <button type="button" onclick="mathQuiz()">Validate</button><br>
     <div id="outputDiv"></div>
 </body>
 </html>
