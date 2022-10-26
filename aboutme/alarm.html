@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Get up or Sleep</title>
+
+<script>
+/* Input: current month, current day of the month and current day of the week from the computer's clock.
+ * Processing:
+ *  Determine if current date it's holiday or weekend.
+ * Output: Display "Get up!" if it isn't holiday or weekend. Or display "Sleep in" if it's holiday or weekend".
+ */
+function alarm_() {
+    // Get the current date and current day of the week.
+    let now = new Date();
+    let month = now.getMonth();
+    let dayOfMonth = now.getDate();
+    let dayOfWeek = now.getDay();
+    let msg;
+
+    // Determinate if it's holiday or weekend, or not.
+    if ((month == 0 && dayOfMonth == 1) || (month == 6 && dayOfMonth == 4) || (month == 12 && dayOfMonth == 25) || (dayOfWeek == 0 || dayOfWeek == 6)) {
+        msg = "Seep in";
+    }
+    else {
+        msg = "Get up!";
+    }
+
+    // Display the message.
+    document.getElementById('message').innerHTML = msg;
+}
+</script>
+</head>
+
+<body>
+<h1>Today</h1><br>
+<button type="button" onclick="alarm_()">Should I...</button>  
+<div id='message'></div>  
+</body>
+</html>
