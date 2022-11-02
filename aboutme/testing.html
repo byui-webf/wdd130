@@ -1,49 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Quiz</title>
-    <script>
-        /*  Input: First number, the operator, second number, and then solution
-            Processing: perform the math problem, then check if the answer is correct
-            Output: Feedback to the user about the answer    */
-       
-            function mathQuiz(){
-                let firstnum = parseFloat(document.getElementById("firstInput").value);
-                let operate = document.getElementById("operate").value;
-                let secondnum = parseFloat(document.getElementById("secondInput").value);
-                let res = parseFloat(document.getElementById("result").value);
-                // perform the operation
-                let answer = firstnum+operate+secondnum
-                switch (operate){
-                    case "+":
-                        answer = firstnum + secondnum;
-                        break;
-                    case "-":
-                    answer = firstnum - secondnum;
-                        break;
-                    case "*":
-                    answer = firstnum * secondnum;
-                        break;
-                    case "/":
-                    answer = firstnum / secondnum;
-                }
-                if (answer == res){
-                    document.getElementById("outputDiv").innerHTML = "Correct! Good job!";
-                }
-                else {
-                    document.getElementById("outputDiv").innerHTML = "Incorrect! Try again!";
-                }
-               
-            }
-    </script>
+<meta charset="utf-8">
+<title>test</title>
+
+<script>
+   for (let i=1; i<=8; i++)
+   { alert(i)}
+</script>
 </head>
+
 <body>
-    <h1>Test Your Maths Skills!</h1>
-    <input type="text" id="firstInput" size="3"><input type="text" id="operate" size="1"><input type="text" id="secondInput" size="3"> = <input type="text" id="result" size="3"><br>
-    <button type="button" onclick="mathQuiz()">Validate</button><br>
-    <div id="outputDiv"></div>
+   
 </body>
 </html>
