@@ -12,27 +12,28 @@
  */
 function sumOdds() {
     // Get any integer.
-    let int = parseInt(document.getElementById('anyNumber').value);
-    let sum;
-    sum=0;
+    //let int = parseInt(document.getElementById('anyNumber').value);
+    let mul;
+    sum=5;
 
     // Compute the odds sum.
-    if (int >= 1) {
+    
         
-        for (let i=1; i<=int; i+=2) {
-            sum=sum+i;
+        for (let i=1; i<=10; i+=1) {
+            mul=sum*i;
+            alert(mul);
         }
-    }
+    //alert(sum);
     // Display sum result.
-    document.getElementById('total').innerHTML = sum;
+    //document.getElementById('total').innerHTML = sum;
 }
 </script>
 </head>
 
 <body>
 Please enter a positive integer number:
-<input type="text" id="anyNumber" size="10"><br>
-<button type="button" onclick="sumOdds()">Sum Odds</button><br>
-<div id='total'></div>  
+<!--  <input type="text" id="anyNumber" size="10"><br> --> 
+<button type="button" onclick="sumOdds()">Multiply 5</button><br>
+<!-- <div id='total'></div>  -->
 </body>
 </html>
