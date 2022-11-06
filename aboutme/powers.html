@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Multiply</title>
+
+<script>
+/* Input: A constant named xNumtable.
+ * Processing:
+ *  Power of numer 2 from 0 to 31, inclusive.
+ * Output: Display the powers.
+ */
+function powers() {
+
+    let num=2;
+    let pwr=0;
+
+    // Compute powers.
+        for (let i=0; i<=31; i+=1) {
+            pwr=Math.pow(num,i);
+            document.write(num+" pow "+i+" = "+pwr+"<br/>");
+        }
+}
+</script>
+</head>
+
+<body>
+We're going the power of numer two from 0 to 31:
+<button type="button" onclick="powers()">Display powers</button>
+</body>
+</html>

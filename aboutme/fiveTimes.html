@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Multiply</title>
+
+<script>
+/* Input: A constant named table.
+ * Processing:
+ *  Multiply the constant from 1 to 12.
+ * Output: Display the times table.
+ */
+function times() {
+
+    let mul;
+    const table=5;
+
+    // Compute five times table.
+        for (let i=1; i<=12; i+=1) {
+            mul=table*i;
+            document.write(table+" * "+i+" = "+mul+"<br/>");
+        }
+}
+</script>
+</head>
+
+<body>
+Five times table:
+<br><button type="button" onclick="times()">Display now</button>
+</body>
+</html>
