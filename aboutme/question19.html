@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Question19</title>
+<script>
+/* Input: Read two numbers
+ * Processing: Check if both numbers are greater than 5 OR if their sum is greater than 20. 
+ * Output: Display TRUE if one of the conditions is true otherwise display FALSE.
+ */
+ function check() {
+// Get the two numbers from the user.
+    let number1 = parseInt(document.getElementById('one').value);
+    let number2 = parseInt(document.getElementById('two').value);
+    let message = "test";
+
+    // Check conditions.
+    if (number1 > 5 && number2 > 5 ) {
+            message = "TRUE";
+        }
+    else if (number1 + number2 > 20) {
+            message = "TRUE";
+        }
+    else {
+            message = "FALSE";
+        }
+
+    // Display the message TRUE or FALSE.
+    document.getElementById('output').innerHTML = message;
+}
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="check()">Click</button>
+<div id="output"></div>
+</body>
+</html>
