@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Wind Chill</title>
+
+<script>
+/* Input: Two values from user, the first will be the Temperature and the second the Wind Speed.
+ * Processing:
+ *  compute the wind chill factor.
+ * Output: Display wind chill factor.
+ */
+function doInputOutput() {
+    // Gets the temperature and speed values from text fields
+    let temp = parseFloat(document.getElementById('temperature').value);
+    let spd = parseFloat(document.getElementById('speed').value);
+    
+    // Call the function windChill
+    let chillf = windChill(temp, spd);
+
+    document.getElementById('output').innerHTML = "Chill Factor is: "+chillf;
+    
+}
+
+function windChill(t,s){
+    // Calculate chill factor
+    let f=35.74+(0.6215*t)-(35.75*(Math.pow(s,0.16)))+0.4275*t*Math.pow(s,0.16);
+
+    // Round the rate to two digits after the decimal.
+    let digits = 2;
+    let multiplier = Math.pow(10, digits);
+    f = Math.round(f * multiplier) / multiplier;
+    // Returns the chill factor value
+    return f;
+}
+</script>
+</head>
+
+<body>
+Let's calculate the chill factor:<br>
+<!-- Get the values from user-->
+Please enter the <b>temperature</b>: <input type="text" id="temperature" size="4"><br>
+And the <b>wind speed</b>:<input type="text" id="speed" size="5">
+<!-- On click button calls the function doInputOutput-->
+<br/><button type="button" onclick="doInputOutput()">Wind Chill</button><br>
+<!-- Display chill factor -->
+<div id="output"></div>
+</body>
+</html>
