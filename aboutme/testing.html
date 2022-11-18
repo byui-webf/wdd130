@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Powers of Two</title>
-    <script>
-        /*  Input: -
-            Processing: calculate the powers of 2
-            Output: powers of 2    */
-            "use strict";
-            function calculate(){
-                for (let i = 0;  i > 3;  i++) {
-    alert("Goodbye");
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wind Chill</title>
+<script>
+function doInputOutput () {
+temp = parseFloat(document.getElementById("temperatureInput").value);
+wind = parseFloat(document.getElementById("windSpeedInput").value);
+
+windChill (tempF, speed);
+
+windChillResult = windChill(temperature, wind2);
+
+document.getElementById("outputDiv").innerHTML = windChillResult;
+
 }
-}
-document.getElementById('output').innerHTML = message;
-            
-    </script>
+function windChill(tempF, speed)
+
+</script>
 </head>
-<body>  
-    Please click on the button below to see the powers of 2 starting from 1 to 31.<br>
-   <button type="button" onclick="calculate()">Click Now</button><br>
-   <div id="output"></div>
+<body>
+Temperature<input type="text" id="temperatureInput">
+Wind Speed<input type="windSpeedInput">
+<button type="button" onclick="doInputOutput () "> Wind Chill</button>
+<div id="outputDiv"></div>
 </body>
 </html>
