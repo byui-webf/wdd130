@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wind Chill</title>
-<script>
-function doInputOutput () {
-temp = parseFloat(document.getElementById("temperatureInput").value);
-wind = parseFloat(document.getElementById("windSpeedInput").value);
-
-windChill (tempF, speed);
-
-windChillResult = windChill(temperature, wind2);
-
-document.getElementById("outputDiv").innerHTML = windChillResult;
-
-}
-function windChill(tempF, speed)
-
-</script>
-</head>
-<body>
-Temperature<input type="text" id="temperatureInput">
-Wind Speed<input type="windSpeedInput">
-<button type="button" onclick="doInputOutput () "> Wind Chill</button>
-<div id="outputDiv"></div>
-</body>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      div {
+        margin-bottom: 15px;
+      }
+      label {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/form/submit" method="post">
+      <div>
+        <label>Short</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Simple label</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Label having more text</label>
+        <input type="text" />
+      </div>
+    </form>
+  </body>
 </html>
