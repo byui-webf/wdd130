@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Invest</title>
+<style>
+    /* Determine space between lines and align input texts */
+    div {
+      margin-bottom: 15px;
+    }
+    label {
+      display: inline-block;
+      width: 240px;
+      text-align: left;
+    }
+  </style>
+
+<script>
+/* Input: Starting amount (principal), annual rate, total of years, payments per year and number of payments paid to date.
+ * Processing:
+ *  Calculate the monthly payment for a loan. 
+ *  Calculate the balance or payoff amount.
+ * Output: Display the monthly payment and the payoff amount.
+ */
+function doPayment() {
+    // Gets the data to calculate the monthly payment.
+    let amtBorrow = parseFloat(document.getElementById('amountb').value);
+    let annualR = parseFloat(document.getElementById('a_rate').value);
+    let nYears = parseFloat(document.getElementById('n_years').value);
+    let paymentsYear = parseFloat(document.getElementById('payments').value);
+    // Call the function computePayment
+    let mPayment = computePayment(amtBorrow, annualR, nYears, paymentsYear);
+
+    document.getElementById('output').setAttribute("align", "center");
+    document.getElementById('output').innerHTML = "$" + mPayment;   
+}
+
+function computePayment(principal, annualRate, years, paymentsPerYear){
+    // Calculate monthly payment
+    let monthpay=0, r=annualRate/paymentsPerYear, n=years*paymentsPerYear;
+    monthpay = (principal*r)/(1-Math.pow((1+r),-n));
+
+    // Round the result to two digits after the decimal.
+    let digits = 2;
+    let multiplier = Math.pow(10, digits);
+    monthpay = Math.round(monthpay * multiplier) / multiplier;
+    // Returns the monthly payment
+    return monthpay;
+}
+
+function doBalance() {
+    // Gets the data to calculate payoff amount.
+    let amtBorrow = parseFloat(document.getElementById('amountb').value);
+    let annualR = parseFloat(document.getElementById('a_rate').value);
+    let nYears = parseFloat(document.getElementById('n_years').value);
+    let paymentsYear = parseFloat(document.getElementById('payments').value);
+    let nPaysPerPaid = parseFloat(document.getElementById('paymentsPaid').value);
+  
+    // Call the function computeBalance
+    let paymentsPaidToDate = computeBalance(amtBorrow, annualR, nYears, paymentsYear, nPaysPerPaid);
+
+    document.getElementById('output2').setAttribute("align", "center");
+    document.getElementById('output2').innerHTML = "$" + paymentsPaidToDate;   
+}
+
+function computeBalance(principal, annualRate, years, paymentsPerYear, nPaymentsPaid){
+    // Calculate payoff amount
+    let payOffAmt=0, r=annualRate/paymentsPerYear, n=years*paymentsPerYear; 
+    let p= (principal*r)/(1-Math.pow((1+r),-n));
+
+
+    payOffAmt = (principal * (Math.pow(1+r,nPaymentsPaid)))-((p*(Math.pow(1+r,nPaymentsPaid)-1))/r);
+    // Round the result to two digits after the decimal.
+    let digits = 2;
+    let multiplier = Math.pow(10, digits);
+    payOffAmt = Math.round(payOffAmt * multiplier) / multiplier;
+    // Returns payoff amount
+    return payOffAmt;
+}
+</script>
+</head>
+
+<body>
+<form action="/form/submit" method="post">
+
+<h1>Loan Calculator</h1>    
+
+<!-- Get the values from user-->
+<div><label>Amount borrowed (principal): </label><input type="text" id="amountb" size="8"></div>
+<div><label>Annual interest rate (example: .065): </label><input type="text" id="a_rate" size="6"></div>
+<div><label>Number of years: </label><input type="text" id="n_years" size="4"></div>
+<div><label>Payments per year: </label><input type="text" id="payments" size="4"></div>
+
+<!-- On click button calls the function doPayment-->
+<button type="button" onclick="doPayment()">Compute payment</button>
+<!-- Display monthly payment -->
+<label><div id="output"></div></label>
+<div><label>Number of payments paid to date: </label><input type="text" id="paymentsPaid" size="4"></div>
+<!-- On click button calls the function doBalance-->
+<button type="button" onclick="doBalance()">Compute payoff amount</button>
+<!-- Display payoff amount -->
+<label><div id="output2"></div></label>
+</body>
+</html>
