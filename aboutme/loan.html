@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Invest</title>
+<title>Loan</title>
 <style>
     /* Determine space between lines and align input texts */
     div {
@@ -67,9 +67,9 @@ function computeBalance(principal, annualRate, years, paymentsPerYear, nPayments
     // Calculate payoff amount
     let payOffAmt=0, r=annualRate/paymentsPerYear, n=years*paymentsPerYear; 
     let p= (principal*r)/(1-Math.pow((1+r),-n));
+    
 
-
-    payOffAmt = (principal * (Math.pow(1+r,nPaymentsPaid)))-((p*(Math.pow(1+r,nPaymentsPaid)-1))/r);
+    payOffAmt = (principal * (Math.pow(1+r,nPaymentsPaid)))-((p*((Math.pow(1+r,nPaymentsPaid))-1))/r);
     // Round the result to two digits after the decimal.
     let digits = 2;
     let multiplier = Math.pow(10, digits);
