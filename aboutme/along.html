@@ -2,38 +2,67 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Investment calculator</title>
+<title>Invest</title>
+<style>
+    /* Determine space between lines and align input texts */
+    div {
+      margin-bottom: 15px;
+    }
+    label {
+      display: inline-block;
+      width: 250px;
+      text-align: left;
+    }
+  </style>
 
 <script>
-/* Input: amount invested, annual rate, number of years, periods per year
- * Processing:Calls the computeFutureValue function. f = a (1 + r)^n
- * Output: future value
- */ 
-     
-     function doFV() {
-       let p = parseFloat(document.getElementById('amountinvested').value);
-       let a = parseFloat(document.getElementById('annualrate').value);
-       let y = parseFloat(document.getElementById('numofyears').value);
-       let n = parseFloat(document.getElementById('periods').value);
-       let result = computeFutureValue(p, a, y, n);
-       document.getElementById("outputDiv").innerHTML = amount;
-    }
-    function computeFutureValue(principal, annualRate, years, periodsPerYear) {
-       let amount = principal * Math.pow((1 + annualRate/ periodsPerYear), years*PeriodsPerYear);
-//       console.log(amount);
- //      document.getElementById("outputDiv").innerHTML = amount;
- return amount;
-    }
-   </script>
+/* Input: Starting amount (principal), annual rate, total of years and compound(periods per year) .
+ * Processing:
+ *  Calculate the end balance of the investment with the formula f=a(1+r) pow to n. 
+ *  It's necessary divide annual rate by period per year to get r.
+ *  Also need to multiplicate years by periods per year to get n.
+ * Output: Display the end balance.
+ */
+function doFV() {
+    // Gets the data to calculate the end balance of the investment.
+    let amtInv = parseFloat(document.getElementById('amount').value);
+    let annualR = parseFloat(document.getElementById('a_rate').value);
+    let nYears = parseFloat(document.getElementById('n_years').value);
+    let periodsYear = parseFloat(document.getElementById('periods').value);
+    // Call the function computeFutureValue
+    let futureValue = computeFutureValue(amtInv, annualR, nYears, periodsYear);
+
+    document.getElementById('output').setAttribute("align", "center");
+    document.getElementById('output').innerHTML = "$" + futureValue;   
+}
+
+function computeFutureValue(principal, annualRate, years, periodsPerYear){
+    // Calculate end balance
+    let fv = principal * ((Math.pow((1+(annualRate/periodsPerYear)),(years*periodsPerYear))));
+
+    // Round the result to two digits after the decimal.
+    let digits = 2;
+    let multiplier = Math.pow(10, digits);
+    fv = Math.round(fv * multiplier) / multiplier;
+    // Returns the future value
+    return fv;
+}
+</script>
 </head>
 
 <body>
-    <h1>Investment Calculator</h1> <br>
-    Amount invested (principal): <input type="text" id="amountinvested"> <br>
-    Annual rate (example .08): <input type="text" id="annualrate'"> <br>
-    number of years: <input type="text" id="numofyears"> <br>
-    Periods per year: <input type="text" id="periods"> <br>
+<form action="/form/submit" method="post">
+
+<h1>Investment Calculator</h1>    
+
+<!-- Get the values from user-->
+<div><label>Amount invested (principal): </label><input type="text" id="amount" size="8"></div>
+<div><label>Annual rate (example: .08): </label><input type="text" id="a_rate" size="6"></div>
+<div><label>Number of years: </label><input type="text" id="n_years" size="4"></div>
+<div><label>Periods per year: </label><input type="text" id="periods" size="4"></div>
+<!-- On click button calls the function doFV-->
 <button type="button" onclick="doFV()">Compute future value</button>
-<div id="outputDiv"></div>        
-</body>       
+<!-- Display future value (End Balance) -->
+<label><div id="output"></div></label>
+</body>
 </html>

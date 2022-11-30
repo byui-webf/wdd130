@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Rex Barzee">
+<title>Arrays</title>
+
+<script>
+/* Input: A list of text items, each item on a separate line.
+ * Processing:
+ *     Split the text items into an array.
+ *     Sort the array.
+ *     Join the array into a string.
+ * Output: /* Defining Table
+ * Input: no user input
+ * Processing: Test the addEnds and getMiddle functions by calling them.
+ * Output: The values returned from the addEnds and getMiddle functions.
+ */
+function test() {
+    let list1 = [ 17, 8, 9, 5, 20 ];
+    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+    // Test the addEnds function by calling it two times.
+    let sum1 = addEnds(list1);
+    let sum2 = addEnds(list2);
+
+    // Test the getMiddle function by calling it two times.
+    let mid1 = getMiddle(list1);
+    let mid2 = getMiddle(list2);
+
+    // Build a string to display to the user.
+    let output =
+            sum1 + '<br>' +
+            sum2 + '<br>' +
+            mid1 + '<br>' +
+            mid2;
+
+    // Display the output string for the user to see.
+    document.getElementById('output').innerHTML = output;
+}
+
+function addEnds (list) {
+    let result = list[0] + list[list.length-1];
+    return result;
+}
+
+function getMiddle (list) {
+    let left = 0;
+    let right = list.length - 1;
+    // Compute the index of the middle of the current list(array).
+    if ( list.length % 2 != 0) {
+        let mid = left + ((right - left) >>> 1);
+        let result = list[mid];
+        return result;
+    }
+    else {
+        let mid = left + ((right - left) >>> 1);
+        let result = (list[mid] + list[mid+1])/2;
+        return result;
+    }
+}
+
+</script>
+</head>
+
+<body>
+    There are two arrays <b>list1 = [17, 8, 9, 5, 20]</b><br>
+    and <b>list2 = [12, 4, 8, 15, 17, 5, 20, 11]</b><br>
+    From list1 we're going to sum the first and the last value<br>
+    and from list2 we're going to get the value of the middle element:<br>
+    <button type="button" onclick="test()">Array ops</button>
+    <div id="output"></div>
+</body>
+</html>
