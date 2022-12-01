@@ -1,43 +1,64 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="author" content="Rex Barzee">
-<title>Sort Text</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array test</title>
+    <script>
+        /* Defining Table
+    * Input: no user input
+    * Processing: Test the addEnds and getMiddle functions by calling them.
+    * Output: The values returned from the addEnds and getMiddle functions.
+    */
+    function test() {
+        let list1 = [ 17, 8, 9, 5, 20 ];
+        let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
 
-<script>
-/* Input: A list of text items, each item on a separate line.
- * Processing:
- *     Split the text items into an array.
- *     Sort the array.
- *     Join the array into a string.
- * Output: The sorted list of text items
- */
-function process() {
-    // Get the text entered by the user.
-    let text = document.getElementById('input').value;
+    // Test the addEnds function by calling it two times.
+        let sum1 = addEnds(list1);
+        let sum2 = addEnds(list2);
 
-    // Split the text at each new
-    // line into an array of strings.
-    let list = text.split('\n');
+    // Test the getMiddle function by calling it two times.
+        let mid1 = getMiddle(list1);
+        let mid2 = getMiddle(list2);
 
-    // Sort the array of strings.
-    list.sort();
+    // Build a string to display to the user.
+        let output =
+            sum1 + '<br>' +
+            sum2 + '<br>' +
+            mid1 + '<br>' +
+            mid2;
 
-    // Join the sorted array into a string
-    // of text separated by newline characters.
-    let output = list.join('\n');
-
-    // Display the string for the user to see.
-    document.getElementById('output').value = output;
+    // Display the output string for the user to see.
+        document.getElementById('output').innerHTML = output;
 }
-</script>
+    // Summarize the begining and the end value of the array.
+    function addEnds(list){
+        let end = list.length - 1;
+        let result = list[0] + list[end];
+    return result;
+}
+    function getMiddle(list){
+    if (list.length % 2 != 0) {
+    // if the array's length odd, returns the value of the middle element in an array. 
+        let mid = list.length - 1 >>> 1;
+        let result = list[mid];
+        return result;
+    }
+    else {
+    // if the array's length even, returns the average of the two middle elements.
+        let leftmid = (list.length >>> 1) - 1;
+        let rightmid = list.length >>> 1;
+        let result = (list[leftmid] + list[rightmid]) / 2;
+        return result;
+    }
+       
+}
+    </script>
 </head>
-
 <body>
-<textarea id="input" rows="16" cols="20"></textarea>
-<button type="button" onclick="process()">Sort</button>
-<textarea id="output" rows="16" cols="20"></textarea>
+    <button type="button" onclick="test()">Push me!</button>
+    <div id="output"></div>
 </body>
-</html>
 </html>
