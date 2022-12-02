@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Arrays</title>
+
+<script>
+/* Defining Table
+ * Input: no user input
+ * Processing: Test the countEvens and multiply functions by calling them.
+ * Output: The values returned from the countEvens and multiply functions.
+ */
+ function test() {
+    let list1 = [ 17, 8, 9, 5, 20 ];
+    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+    // Test the countEvens function by calling it two times.
+    let count1 = countEvens(list1);
+    let count2 = countEvens(list2);
+
+    // Test the multiply function by calling it two times.
+    let mult1 = multiply(list1,3);
+    let mult2 = multiply(list2,2);
+
+    // Build a string to display to the user.
+    let output =
+            count1 + '<br>' +
+            count2 + '<br>' +
+            mult1 + '<br>' +
+            mult2;
+
+    // Display the output string for the user to see.
+    document.getElementById('output').innerHTML = output;
+}
+
+function countEvens(list) {
+    let count=0;
+    // Count even numbers.  
+    for (let index=0; index < (list.length); index++) {
+            if ((list[index] % 2) == 0){
+                count = count + 1;
+            }
+    }
+    // Return how many even numbers are in the array.
+    return count;
+}
+
+function multiply (list,multiplier) {
+    let result = new Array (list.length)
+    for (let index=0; index < (list.length); index++){
+        result[index] = list[index] * multiplier;
+    }
+    result = '['+result.toString()+"]";
+    return result;
+}
+
+</script>
+</head>
+
+<body>
+    There are two arrays <b>list1 = [17, 8, 9, 5, 20]</b><br>
+    and <b>list2 = [12, 4, 8, 15, 17, 5, 20, 11]</b><br>
+    From both arrays we're going to count how many elements of each are even numbers <br>
+    and then we're going to multiply each element of list1 by 3 and each element of list2 by 2:<br>
+    <button type="button" onclick="test()">Array ops</button>
+    <div id="output"></div>
+</body>
+</html>
