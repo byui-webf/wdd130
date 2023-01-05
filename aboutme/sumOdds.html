@@ -15,6 +15,9 @@ function sumOdds() {
     let int = parseInt(document.getElementById('anyNumber').value);
     let sum;
     sum=0;
+    let x = 2, y = 6, z = 5;
+    let i = 0, limit = 5;
+
 
     // Compute the odds sum.
     if (int >= 1) {
@@ -22,10 +25,13 @@ function sumOdds() {
         for (let i=1; i<=int; i+=2) {
             sum=sum+i;
         }
+ 
+
     }
     // Display sum result.
     document.getElementById('total').innerHTML = sum;
-}
+ 
+    }
 </script>
 </head>
 

@@ -25,27 +25,27 @@
  */
 function doFV() {
     // Gets the data to calculate the end balance of the investment.
-    let amtInv = parseFloat(document.getElementById('amount').value);
-    let annualR = parseFloat(document.getElementById('a_rate').value);
-    let nYears = parseFloat(document.getElementById('n_years').value);
-    let periodsYear = parseFloat(document.getElementById('periods').value);
+    let sv = parseFloat(document.getElementById('startv').value);
+    let ev = parseFloat(document.getElementById('endv').value);
+    let m = parseInt(document.getElementById('mon').value);
+   // let periodsYear = parseFloat(document.getElementById('periods').value);
     // Call the function computeFutureValue
-    let futureValue = computeFutureValue(amtInv, annualR, nYears, periodsYear);
+    let futureValue = depreciation(sv, ev, m);
 
     document.getElementById('output').setAttribute("align", "center");
     document.getElementById('output').innerHTML = "$" + futureValue;   
 }
 
-function computeFutureValue(principal, annualRate, years, periodsPerYear){
-    // Calculate end balance
-    let fv = principal * ((Math.pow((1+(annualRate/periodsPerYear)),(years*periodsPerYear))));
+function depreciation(startValue, endValue, months){
+    // Calculate depreciation
+    let d = (startValue-endValue)/months;
 
     // Round the result to two digits after the decimal.
     let digits = 2;
     let multiplier = Math.pow(10, digits);
-    fv = Math.round(fv * multiplier) / multiplier;
-    // Returns the future value
-    return fv;
+    d = Math.round(d * multiplier) / multiplier;
+    // Returns the  depreciation value
+    return d;
 }
 </script>
 </head>
@@ -56,10 +56,10 @@ function computeFutureValue(principal, annualRate, years, periodsPerYear){
 <h1>Investment Calculator</h1>    
 
 <!-- Get the values from user-->
-<div><label>Amount invested (principal): </label><input type="text" id="amount" size="8"></div>
-<div><label>Annual rate (example: .08): </label><input type="text" id="a_rate" size="6"></div>
-<div><label>Number of years: </label><input type="text" id="n_years" size="4"></div>
-<div><label>Periods per year: </label><input type="text" id="periods" size="4"></div>
+<div><label>Start Value: </label><input type="text" id="startv" size="8"></div>
+<div><label>End Value: </label><input type="text" id="endv" size="6"></div>
+<div><label>Months: </label><input type="text" id="mon" size="4"></div>
+
 <!-- On click button calls the function doFV-->
 <button type="button" onclick="doFV()">Compute future value</button>
 <!-- Display future value (End Balance) -->

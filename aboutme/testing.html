@@ -2,63 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array test</title>
-    <script>
-        /* Defining Table
-    * Input: no user input
-    * Processing: Test the addEnds and getMiddle functions by calling them.
-    * Output: The values returned from the addEnds and getMiddle functions.
-    */
-    function test() {
-        let list1 = [ 17, 8, 9, 5, 20 ];
-        let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+    <title>Array Test 2</title>
+  <script>
+    /* Defining Table
+ * Input: no user input
+ * Processing: Test the countEvens and multiply functions by calling them.
+ * Output: The values returned from the countEvens and multiply functions.
+ */
+function test() {
+    let list1 = [ 17, 8, 9, 5, 20 ];
+    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
 
-    // Test the addEnds function by calling it two times.
-        let sum1 = addEnds(list1);
-        let sum2 = addEnds(list2);
+    // Test the countEvens function by calling it two times.
+    let count1 = countEvens(list1);
+    let count2 = countEvens(list2);
 
-    // Test the getMiddle function by calling it two times.
-        let mid1 = getMiddle(list1);
-        let mid2 = getMiddle(list2);
+    // Test the multiply function by calling it two times.
+    let mult1 = multiply(list1,3);
+    let mult2 = multiply(list2,2);
 
     // Build a string to display to the user.
-        let output =
-            sum1 + '<br>' +
-            sum2 + '<br>' +
-            mid1 + '<br>' +
-            mid2;
+    let output =
+            "There are: " + count1 + " evens in list 1."+'<br>' +
+            "There are: " + count2 + " evens in list 2. " + '<br>' +
+            "Multiplied in first array " + mult1 + '<br>' +
+            "Multiplied in second array " + mult2;
 
     // Display the output string for the user to see.
-        document.getElementById('output').innerHTML = output;
+    document.getElementById('output').innerHTML = output;
 }
-    // Summarize the begining and the end value of the array.
-    function addEnds(list){
-        let end = list.length - 1;
-        let result = list[0] + list[end];
-    return result;
-}
-    function getMiddle(list){
-    if (list.length % 2 != 0) {
-    // if the array's length odd, returns the value of the middle element in an array. 
-        let mid = list.length - 1 >>> 1;
-        let result = list[mid];
-        return result;
+    //This will find the even numbers and display them, I hope!//
+   function countEvens(list){
+      var even = [];
+      for(var i=0; i<list.length; i++){
+        if(list[i] % 2 === 0){
+          even.push(list[i]);
+          }
+        }
+          return even.length;
+        }
+    
+    function multiply(list, multiplier){
+    // (using the map call) I can write a function directly in the map call. The map calls the list. This will use the function for all inputs of the multiplier.//  
+  return list.map(function (list){
+    return list * multiplier;
+  });
+      
     }
-    else {
-    // if the array's length even, returns the average of the two middle elements.
-        let leftmid = (list.length >>> 1) - 1;
-        let rightmid = list.length >>> 1;
-        let result = (list[leftmid] + list[rightmid]) / 2;
-        return result;
-    }
-       
-}
-    </script>
+</script>
 </head>
 <body>
-    <button type="button" onclick="test()">Push me!</button>
-    <div id="output"></div>
+  <h1>Array Test 2</h1>
+  
+  <button type='button' onclick="test()">Array Test</button>
+  <div id="output"></div>
 </body>
 </html>

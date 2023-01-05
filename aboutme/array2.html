@@ -11,12 +11,12 @@
  * Output: The values returned from the countEvens and multiply functions.
  */
  function test() {
-    let list1 = [ 17, 8, 9, 5, 20 ];
-    let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+    let list1 = [ 70, 950, 671, 6 ];
+    let list2 = [ -72.3, 3000, 873, 2312, 68, 7501.3 ];
 
     // Test the countEvens function by calling it two times.
-    let count1 = countEvens(list1);
-    let count2 = countEvens(list2);
+    let count1 = averageBig(list1);
+    let count2 = averageBig(list2);
 
     // Test the multiply function by calling it two times.
     let mult1 = multiply(list1,3);
@@ -33,16 +33,27 @@
     document.getElementById('output').innerHTML = output;
 }
 
-function countEvens(list) {
+function averageBig(list) {
     let count=0;
-    // Count even numbers.  
+    let element=0;
+    let avg=0;
+    // Sum numbers greater than 1000.  
     for (let index=0; index < (list.length); index++) {
-            if ((list[index] % 2) == 0){
-                count = count + 1;
+            if (list[index]  > 1000){
+                count = count + list[index];
+                element = element + 1;
             }
     }
-    // Return how many even numbers are in the array.
-    return count;
+    if (count > 0) {
+        avg=count/element;
+    
+    // Round the result to two digits after the decimal.
+    let digits = 1;
+    let multiplier = Math.pow(10, digits);
+    avg = Math.round(avg * multiplier) / multiplier;
+    }
+    // Return average of numbers greater than 1000.
+    return avg;
 }
 
 function multiply (list,multiplier) {
