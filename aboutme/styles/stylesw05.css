@@ -1,0 +1,33 @@
+body{
+    background-color: gray;
+    margin: 0;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+.card_desk{
+    display: inline;
+    max-width: 15%;
+    margin: 50px 50px 50px 380px;
+    border-radius: 50%;
+    border:10px solid rgb(56, 50, 50);
+}
+
+.card_graphic{
+    display: inline;
+    max-width: 15%;
+    margin: 50px 50px;
+    border-radius: 50%;
+    border:10px solid rgb(56, 50, 50);
+}
+
+.card_person{
+    display: inline;
+    max-width: 15%;
+    margin: 50px 50px;
+    border-radius: 50%;
+    border:10px solid rgb(56, 50, 50);
+}
+
