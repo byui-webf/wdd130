@@ -2,7 +2,7 @@
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Inter+Tight:wght@300&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Merriweather&family=PT+Sans:wght@700&display=swap');
 
 :root {
   /* change the values below to your colors from your palette */
