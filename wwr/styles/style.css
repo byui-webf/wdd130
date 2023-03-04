@@ -22,7 +22,7 @@ nav a{
 main section{
     text-align: center;
 }
-#background{
+#background, #background2{
     height: 725px;
     background-color: goldenrod;
 }
@@ -61,7 +61,7 @@ nav a:hover{
     color:black;
 }
 
-.msg{
+.msg, .msg-rivers{
     background-color: khaki;
     line-height: 1.5em;
     padding: 35px;
@@ -71,7 +71,7 @@ footer{
     background-color: tan;
     color:black;
     padding: 25px 50px;
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -88,14 +88,14 @@ h4{
     color:white;
 }
 
-.msg h2{
+.msg h2, .msg-rivers h2{
     color:rgb(219, 94, 21);
     font-family:'Permanent Marker','Inter Thight', 'PT Sans Narrow';
     font-size:40px;
     text-shadow:3px 3px 3px white;
 }
 
-.msg p{
+.msg p, .msg-rivers p{
     color:rgb(242, 245, 58);
     font-size: .8em;
     padding-bottom: 15px;
@@ -187,12 +187,12 @@ nav {
     margin-top: 100px;
 }
 
-main {
+.home-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
 
-.card-img, .mountains {
+.card-img, .mountains, .rivers {
     width: 100%;
 }
 
@@ -223,7 +223,7 @@ main {
     box-shadow: 5px 5px 10px #6f7364;
 }
 
-.msg {
+.msg{
     background-color: #6f7364;
     padding: 35px;
     grid-column: 6/10;
@@ -231,8 +231,12 @@ main {
     box-shadow: 5px 5px 10px #6f7364;
 }
 
+
+
+
+
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+    #hero, .home-grid, .rivers-grid {
         display: block;
         height: auto;
     }
@@ -260,10 +264,10 @@ main {
         margin: 50px auto;
         width: 60%;
     }
-    #background {
+    #background, #background2 {
         display: none;
     }
-    .mountains, .msg {
+    .mountains, .msg, .rivers {
         width: 80%;
         display: block;
         margin: 0 auto;
@@ -271,4 +275,94 @@ main {
     footer {
         margin-top: 25px;
     }
+}
+
+/*Rivers page style */
+.rivers-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.salmon {
+    width: 90%;
+    grid-column: 1/7;
+    grid-row: 1/2;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 100px;
+    margin-left: 20px;    
+}
+
+.desolation {
+    width: 90%;
+    grid-column: 1/7;
+    grid-row: 2/3;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 100px;
+    margin-left: 20px;    
+}
+
+.grand-canyon {
+    width: 90%;
+    grid-column: 1/7;
+    grid-row: 3/4;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 100px;
+    margin-left: 20px;    
+}
+
+.salmon-card  {
+    background-color: #a5a89d;
+    padding: 35px;
+    grid-column: 7/11;
+    grid-row: 1/2;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin: 20px;
+}
+
+.desolation-card  {
+    background-color: #a5a89d;
+    padding: 35px;
+    grid-column: 7/11;
+    grid-row: 2/3;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin: 20px;
+}
+
+.grand-canyon-card  {
+    background-color: #a5a89d;
+    padding: 35px;
+    grid-column: 7/11;
+    grid-row: 3/4;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin: 20px;
+}
+
+.salmon-card p, .desolation-card p, .grand-canyon-card p {
+    color:rgb(23, 36, 158);
+    font-size: .9em;
+    padding-bottom: 15px;
+}
+
+.msg-rivers  {
+    background-color: #21241c;
+    padding: 35px;
+    grid-column: 6/10;
+    grid-row: 4/5;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+
+.rivers {
+    width: 100%;
+    grid-column: 2/7;
+    grid-row: 4/5;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 100px;
+}
+
+#background2 {
+    grid-column: 1/11;
+    grid-row: 4/5;
 }
