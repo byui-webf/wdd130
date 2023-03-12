@@ -86,13 +86,16 @@ body {
 <div class="content2">
   <h1>Quote2</h1>
   <p>Sister Medina shares an scripture and her testimony</p>
-  <button id="myBtn2" onclick="myFunction()">Play</button>
+  <button id="myBtn2" onclick="myFunction2()">Play</button>
 </div>
 
 <script>
 var video = document.getElementById("myVideo");
 var btn = document.getElementById("myBtn");
 var vid = document.getElementById("myVideo");
+var video2 = document.getElementById("myVideo2");
+var btn2 = document.getElementById("myBtn2");
+var vid2 = document.getElementById("myVideo2");
 
 function myFunction() {
   if (video.paused) {
@@ -101,6 +104,16 @@ function myFunction() {
   } else {
     video.pause();
     btn.innerHTML = "Play";
+  }
+}
+
+function myFunction2() {
+  if (video2.paused) {
+    video2.play();
+    btn2.innerHTML = "Pause";
+  } else {
+    video2.pause();
+    btn2.innerHTML = "Play";
   }
 }
 </script>
