@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&Didact+Gothic&Inter+Tight:wght@300&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=family=PT+Sans+Narrow&display=swap');
 
 #content {
     max-width: 1800px;
@@ -12,26 +12,32 @@ nav a{
     padding-top: 80px;
 }
 
-#chappel-msg h1, #hero-msg h4{
+#chappel-msg h1, #chappel-msg h4{
     text-align: center;
 }
 
-.button-box{
-    text-align: center;
+#chappel-msg h4, #page1-msg h4 {
+    margin-top: 40%;
 }
+
 main section{
     text-align: center;
 }
-#background, #background2{
-    height: 725px;
-    background-color: goldenrod;
+#background {
+    height: 500px;
+    width: auto;
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: #0a5f30;
+    padding: 50px;
 }
 
 body{
     background-color:#FAF0CA;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: PT Sans, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
 }
 
@@ -62,7 +68,7 @@ nav a:hover{
     color:black;
 }
 
-.msg, .msg-rivers{
+.msg-under-temple {
     background-color: khaki;
     line-height: 1.5em;
     padding: 35px;
@@ -79,14 +85,20 @@ footer{
 }
 
 .home-title{
-    color:crimson;
-    font-family:'Permanent Marker','Inter Thight', 'PT Sans Narrow';
+    color: #e7740f;
+    font-family:'PT Sans Narrow';
     font-size:3em;
     text-shadow:3px 3px 3px white;
 }
 
 h4{
     color:white;
+}
+
+#page1-msg h4 {
+    font-family: Tahoma, sans-serif;
+    color: #0D3B66;
+    text-align: justify;
 }
 
 .msg h2, .msg-rivers h2{
@@ -96,10 +108,11 @@ h4{
     text-shadow:3px 3px 3px white;
 }
 
-.msg p, .msg-rivers p{
-    color:rgb(242, 245, 58);
+.msg-under-temple {
+    color:white;
     font-size: .8em;
     padding-bottom: 15px;
+    text-align: left;
 }
 
 footer a{
@@ -120,7 +133,7 @@ footer a:hover{
     width: 180px;
 }
 
-#chappel-img{
+#chappel-img, #page1-img  {
     width:100%;
 }
 
@@ -143,16 +156,21 @@ footer, .social {
     padding-top:15px;
 }
 
+.lds-icon {
+    width: 60px;
+}
+
 .home-title{
     margin-top: 10px;
 }
 
-.rivers-card, .camping-card, .rapids-card{
+.inspirational-card, .action-card {
     margin: 200px 0;
+    
 }
 
 .card-img{
-    border: 10px solid darkgoldenrod;
+    border: 10px solid #0D3B66;
     transition: transform .5s;
     box-shadow: 5px 5px 10px #6f7364;
 }
@@ -177,8 +195,20 @@ nav {
     margin-top: -100px;
 }
 
+#page1 {
+    display: grid;   
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 50px;
+}
+
 #chappel-box {
     grid-column: 1/4;
+    grid-row:  1/3;
+    z-index: -1;
+}
+
+#page1-box {
+    grid-column: 2/3;
     grid-row:  1/3;
     z-index: -1;
 }
@@ -189,48 +219,57 @@ nav {
     margin-top: 100px;
 }
 
+#page1-msg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 180px;
+}
+
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 200px);
 }
 
-.card-img, .mountains, .rivers {
+.card-img {
     width: 100%;
+    border-radius: 50%;  
 }
 
-.rivers-card {
-    grid-column: 2/4;
-    grid-row: 2/3;
+.inspirational-card {
+    margin-top: 150px;
+    grid-column: 4/5;
+    grid-row: 6/7;
 }
 
-.camping-card {
-    grid-column: 5/7;
-    grid-row: 2/3;
-}
-
-.rapids-card {
-    grid-column: 8/10;
-    grid-row: 2/3;
+.action-card {
+    margin-top: 150px;
+    grid-column: 7/8;
+    grid-row: 6/7;
 }
 
 #background {
-    grid-column: 1/11;
-    grid-row: 4/9;
+    grid-column: 3/9;
+    grid-row: 1/5;
+    height: 470px;
 }
 
-.mountains {
+.temple {
     width: 100%;
-    grid-column: 2/7;
-    grid-row: 5/8;
-    box-shadow: 5px 5px 10px #6f7364;
+    grid-column: 4/8;
+    grid-row: 1/5;
+    margin-top: 100px;
+    box-shadow: 5px 5px 10px white;
 }
 
-.msg{
-    background-color: #6f7364;
-    padding: 35px;
-    grid-column: 6/10;
-    grid-row: 6/7;
+.msg-under-temple {
+    background-color: #0D3B66;
+    padding: 10px;
+    grid-column: 4/8;
+    grid-row: 4/6;
     box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 50px;
+    height: 420px;
 }
 
 
@@ -238,7 +277,7 @@ nav {
 
 
 @media screen and (max-width: 900px) {
-    #hero, .home-grid, .rivers-grid {
+    #chappel, .home-grid, .rivers-grid {
         display: block;
         height: auto;
     }
@@ -249,33 +288,33 @@ nav {
         display: block;
         padding: 15px;
     }
-    #chappel {
+    #chappel, #page1 {
         margin-top: 0;
     }
-    #chappel-msg {
+    #chappel-msg, #page1-msg {
         margin-top: 0;
     }
-    #chappel-msg h4 {
+    #chappel-msg h4, #page1-msg h4 {
         display: none;
     }
     .home-title {
         font-size: 25px;
         color: #6f7364;
     }
-    .rivers-card, .camping-card, .rapids-card { 
+    .rivers-card, .camping-card { 
         margin: 50px auto;
         width: 60%;
     }
-    #background, #background2 {
+    #background {
         display: none;
     }
-    .mountains, .msg, .rivers {
+    .temple, .msg, .rivers {
         width: 80%;
         display: block;
         margin: 0 auto;
     }
     footer {
-        margin-top: 25px;
+        margin-top: 30px;
     }
 }
 
@@ -382,3 +421,38 @@ nav {
 .moveDown {
     margin-top: 3em;
 }
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
