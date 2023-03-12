@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Riverton 22nd Ward</title>
+
+    <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+        
+        // Get the button
+        var btn = document.getElementById("myBtn");
+        
+        // Pause and play the video, and change the button text
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = 'Pause';
+          } else {
+            video.pause();
+            btn.innerHTML = 'Play';
+          }
+        }
+        </script>
+
 </head>
+
+
+
 <body>
     <div id="content">
             <header>
@@ -30,22 +53,11 @@
                 </section>
             </div>
          
-        <main class="home-grid">
+        <!--<main class="home-grid">
             <section class="rivers-card">
-                <!-- The video -->
-                <video autoplay muted loop id="myVideo">
-                    <source src="/22ndward/images/anabell.mp4" type="video/mp4">
-                </video>
-                
-                <!-- Optional: some overlay text to describe the video -->
-                <div class="content">
-                    <h1>Heading</h1>
-                    <p>Lorem ipsum...</p>
-                    <!-- Use a button to pause/play the video with JavaScript -->
-                    <button id="myBtn" onclick="myFunction()">Pause</button>
-                </div>
+            
             </section>
-            <!--<section class="camping-card">
+            <section class="camping-card">
                 <img class="card-img" src="images/camping.jpg" alt="tent in mountains">
                 <img class="icon" src="images/fire_icon.png" alt="fire icon">
                 <h2>Camping</h2>
