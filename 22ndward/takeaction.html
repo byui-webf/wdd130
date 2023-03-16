@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
     <title>Riverton 22nd Ward</title>
 </head>
@@ -23,7 +23,7 @@
                     
                 </nav>
             </header>
-        <div class="slider"        >
+        <div class="slider">
             <!-- Slider main container -->
             <div class="swiper">
             <!-- Additional required wrapper -->
@@ -36,6 +36,8 @@
                 <div class="swiper-slide"><img src="images/pumpkin5.jpg"></div>
                 <div class="swiper-slide"><img src="images/pumpkin6.jpg"></div>
             </div>
+            <div class="tiulo"> Pumpkin carve </div>
+            
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
         
@@ -82,5 +84,30 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+
+        
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+       
+        });
+    </script>
 </body>
 </html>
