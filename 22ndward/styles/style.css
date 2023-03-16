@@ -60,13 +60,16 @@ main section{
     text-align: center;
 }
 #background {
-    height: 500px;
     width: auto;
     margin-top: 50px;
     margin-left: 80px;
     margin-right: 80px;
+    margin-bottom: 50px;
     background-color: #0a5f30;
     padding: 50px;
+    grid-column: 3/9;
+    grid-row: 1/5;
+    height: 570px;
 }
 
 body{
@@ -284,12 +287,6 @@ nav {
     grid-row: 6/7;
 }
 
-#background {
-    grid-column: 3/9;
-    grid-row: 1/5;
-    height: 470px;
-}
-
 .temple {
     width: 100%;
     grid-column: 4/8;
@@ -300,12 +297,12 @@ nav {
 
 .msg-under-temple {
     background-color: #0D3B66;
-    padding: 10px;
+    padding: 30px;
     grid-column: 4/8;
     grid-row: 4/6;
     box-shadow: 5px 5px 10px #6f7364;
     margin-top: 50px;
-    height: 420px;
+    height: 450px;
 }
 
 
