@@ -53,6 +53,28 @@
                 </section>
             </div>
          
+            <video loop id="myVideo">
+                <source src="/22ndward/images/anabell.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              
+              <video loop id="myVideo2">
+                <source src="/22ndward/images/medina.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              
+              <div class="content">
+                <h1>Quote</h1>
+                <p>Sister Acatecatl shares an scripture and her testimony</p>
+                <button id="myBtn" onclick="myFunction()">Play</button>
+              </div>
+              
+              <div class="content2">
+                <h1>Quote2</h1>
+                <p>Sister Medina shares an scripture and her testimony</p>
+                <button id="myBtn2" onclick="myFunction2()">Play</button>
+              </div>
+
         <!--<main class="home-grid">
             <section class="rivers-card">
             
@@ -79,7 +101,7 @@
         <footer>
             <p>Riverton 22nd Ward &copy; 2023 - Juan Antonio Acatecatl C.</p>
             <p><a href="site-plan.html">Site Plan</a></p>
-            <p><a href="/22ndward/contactus.html">Contact US</a></p>
+            <p><a href="/22ndward/contactus.html">Feedback</a></p>
             <div class="social">
                 <a href="https://churchofjesuschrist.org" target="_blank">
                     <img class= "lds-icon" src="images/lds-icon.png" alt="lds icon">
@@ -87,5 +109,37 @@
             </div>
         </footer>
     </div>
+
+
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+        var vid = document.getElementById("myVideo");
+        var video2 = document.getElementById("myVideo2");
+        var btn2 = document.getElementById("myBtn2");
+        var vid2 = document.getElementById("myVideo2");
+        
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        
+        function myFunction2() {
+          if (video2.paused) {
+            video2.play();
+            btn2.innerHTML = "Pause";
+          } else {
+            video2.pause();
+            btn2.innerHTML = "Play";
+          }
+        }
+        </script> 
+
+
 </body>
 </html>

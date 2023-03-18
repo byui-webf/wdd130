@@ -172,7 +172,7 @@ footer a{
 }
 
 footer a:hover{
-    color:rgb(247, 73, 5);
+    color:white;
 }
 
 .icon{
@@ -209,6 +209,7 @@ footer, .social {
 
 .lds-icon {
     width: 60px;
+    
 }
 
 .home-title{
@@ -221,12 +222,13 @@ footer, .social {
 }
 
 .card-img{
+    margin-top: 10%;
     border: 10px solid #0D3B66;
     transition: transform .5s;
     box-shadow: 5px 5px 10px #6f7364;
 }
 
-.card-img:hover {
+.card-img:hover, .lds-icon:hover {
     opacity: .6;
     transform:scale(1.1);
 }
@@ -414,6 +416,68 @@ nav {
   }
   
   #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  /*Take action page*/
+  * {
+    box-sizing: border-box;
+  }
+  
+ /* body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }*/
+  
+  #myVideo {
+    position:fixed;
+    left:10%;
+    bottom: 30%;
+    min-width: 30%; 
+    max-height: 60%;
+  }
+  
+  #myVideo2 {
+    position:fixed;
+    left:35%;
+    bottom: 30%;
+    min-width: 30%; 
+    max-height: 60%;
+  }
+  
+  .content {
+    position: fixed;
+    bottom: 5%;
+    left: 15%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 20%;
+    padding: 10px;
+  }
+  
+  .content2 {
+    position: fixed;
+    bottom: 5%;
+    left: 40%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 20%;
+    padding: 10px;
+  }
+  
+  #myBtn, #myBtn2 {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover, #myBtn2:hover {
     background: #ddd;
     color: black;
   }
