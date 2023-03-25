@@ -40,6 +40,7 @@
                         <div class="swiper-slide"><img src="images/pumpkin4.jpg"></div>
                         <div class="swiper-slide"><img src="images/pumpkin5.jpg"></div>
                         <div class="swiper-slide"><img src="images/pumpkin6.jpg"></div>
+                        <div class="swiper-slide"><img src="images/pumpkin7.jpg"></div>
                     </div>
                     <div class="tiulo"> Pumpkin carve Oct-2022</div>
                     
@@ -55,6 +56,38 @@
             </section>
             <div class="text-activity1">
                 <p>Men and Young Women enjoy a funny activity carving pumpkins</p>
+            </div>
+
+
+            <section class="activity2-card">
+                <div class="slider2">
+                    <!-- Slider main container -->
+                    <div class="swiper2">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper2">
+                        <!-- Slides -->
+                        <div class="swiper-slide2"><img src="images/ChristmasDinner1.jpg"></div>
+                        <div class="swiper-slide2"><img src="images/ChristmasDinner2.jpg"></div>
+                        <div class="swiper-slide2"><img src="images/ChristmasDinner3.jpg"></div>
+                        <div class="swiper-slide2"><img src="images/ChristmasDinner4.jpg"></div>
+                        <div class="swiper-slide2"><img src="images/ChristmasDinner5.jpg"></div>
+                        <div class="swiper-slide2"><img src="images/ChristmasDinner6.jpg"></div>
+                        
+                    </div>
+                    <div class="tiulo2"> Young Men and Women Christmas Dinner-2022</div>
+                    
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination2"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev2"></div>
+                    <div class="swiper-button-next2"></div>  
+                    
+                </div> 
+                
+            </section>
+            <div class="text-activity2">
+                <p>Men and Young Women in their Chistmas dinner 2022</p>
             </div>
            
         </main>
@@ -96,5 +129,30 @@
        
         });
     </script>
+
+<script>
+    const swiper2 = new Swiper('.swiper2', {
+    // Optional parameters
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+
+    
+    pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+    },
+
+    
+    navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
+    },
+
+   
+    });
+</script>
 </body>
 </html>
