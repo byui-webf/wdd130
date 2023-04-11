@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+  }
+  .menu {
+    float: left;
+    width: 20%;
+  }
+  .menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .encabezado {
+    float: left;
+    width: 100%;
+    padding: 0px;
+    overflow: hidden;
+    display: flexbox;
+  }
+  .encabezado h1, .encabezado h3{
+    text-align: center;
+    vertical-align: middle;
+  }
+  .encabezado img{
+        margin-left: 45%;
+  }
+  .right {
+    background-color: lightblue;
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+  }
+  .lds-icon:hover {
+    opacity: .6;
+    transform:scale(1.1);
+}
+.lds-icon {
+    width: 60px;
+    
+}
+  
+  @media only screen and (max-width:800px) {
+    /* For tablets: */
+    .main, .encabezado {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .menu, .main, .right, .encabezado {
+      width: 100%;
+    }
+  }
