@@ -22,6 +22,7 @@
     padding: 0px;
     overflow: hidden;
     display: flexbox;
+    margin-bottom: 10px;
   }
   .encabezado h1, .encabezado h3{
     text-align: center;
@@ -50,8 +51,11 @@
     text-decoration-line: underline;
     text-decoration-color:darkred;
 }
-.vid1-card{
-  margin-left:40% ;
+.vid1-card, .vid2-card, .vid3-card{
+  margin-left:42% ;
+}
+.vid1-msg, .vid2-msg, .vid3-msg{
+  text-align: center;
 }
 /*#page1 {
   display: grid;   
