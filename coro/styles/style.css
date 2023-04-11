@@ -37,13 +37,18 @@
     padding: 10px 15px;
     margin-top: 7px;
   }
-  .lds-icon:hover {
+.lds-icon:hover {
     opacity: .6;
     transform:scale(1.1);
 }
 .lds-icon {
     width: 60px;
     
+}
+.menuitem{ 
+    color:#f4745e;
+    text-decoration-line: underline;
+    text-decoration-color:darkred;
 }
   
   @media only screen and (max-width:800px) {
