@@ -57,9 +57,13 @@
     text-decoration-line: underline;
     text-decoration-color:darkred;
 }
-.vid1-card, .vid2-card, .vid3-card{
+.vid1-card{
   display:block;
   margin-left: 20%;
+}
+.vid2-card, .vid3-card{
+  display:block;
+  margin-left: 36%;
 }
 .vid1-msg, .vid2-msg, .vid3-msg{
   text-align: center;
