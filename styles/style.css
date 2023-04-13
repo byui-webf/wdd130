@@ -34,8 +34,17 @@
     vertical-align: middle;
     color:navy;
   }
-  .encabezado img, .encabezado2 img{
+  /*.encabezado img, .encabezado2 img{
         margin-left: 45%;
+  }*/
+  #logo-contenedor{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #logo-contenedor>img{
+    max-width: 50%;
+    border: 2px solid red;
   }
   .right {
     background-color: lightblue;
