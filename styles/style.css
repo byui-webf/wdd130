@@ -69,6 +69,7 @@
 }*/
 .vid1-msg, .vid2-msg, .vid3-msg{
   text-align: center;
+  margin-top: -80px;
 }
 /*#page1 {
   display: grid;   
