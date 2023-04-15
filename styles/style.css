@@ -79,3 +79,32 @@
       width: 100%;
     }
   }
+
+  .titulo {
+    color:#e7740f ;
+}
+
+.slider {
+    background: #f19c3b;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper {
+    width: 70%;
+    height:max-content;
+}
+
+.swiper-slide img {
+    width: 100%;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color:purple;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: purple;
+}
