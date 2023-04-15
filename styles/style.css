@@ -84,27 +84,31 @@
     color:#e7740f ;
 }
 
+
+
 .slider {
-    background: #f19c3b;
+    background:fixed;
+    height: fit-content;
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
 .swiper {
-    width: 70%;
-    height:max-content;
+    width:70%;
+    height:auto;
 }
 
 .swiper-slide img {
     width: 100%;
-    box-shadow: 5px 5px 10px #6f7364;
+    
+    /*box-shadow: 10px 10px 5px 12px lightblue;*/
 }
 
 .swiper .swiper-button-prev, .swiper .swiper-button-next {
-    color:purple;
+    color:red;
 }
 
 .swiper .swiper-pagination-bullet-active {
-    background: purple;
+    background:red;
 }
