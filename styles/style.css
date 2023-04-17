@@ -67,7 +67,10 @@
 .vid1-msg, .vid3-msg, .vid4-msg{
   text-align: center;
 }
-
+.fotos{
+  display:flex;
+  align-items: center;
+}
   @media only screen and (max-width:800px) {
     /* For tablets: */
     .main, .encabezado {
