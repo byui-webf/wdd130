@@ -53,8 +53,13 @@
     text-decoration-line: underline;
     text-decoration-color:darkred;
 }
-
-
+.vidhor-card{
+  margin-top: -50px;
+}
+.vidhor-msg{
+  text-align: center;
+  margin-top: -80px;  
+}
 .vid2-msg{
   text-align: center;
   margin-top: -80px;
