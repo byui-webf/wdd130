@@ -16,6 +16,11 @@
     padding: 0 20px;
     overflow: hidden;
   }
+  #fotos {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
   .encabezado, .encabezado2{
     float: left;
     width: 100%;
